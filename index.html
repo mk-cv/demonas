@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV • Mindaugas Kučinskas 💀</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="manifest" href="ico/site.webmanifest">
+</head>
+<body>
+
+    <!-- Main Desktop -->
+    <div id="desktop" class="desktop hidden">
+        <!-- Matrix Background -->
+        <canvas id="matrix" class="matrix-canvas"></canvas>
+        <audio id="bgm" src="media/connect.mp3"></audio>
+        <audio id="connectSound" src="media/connect.mp3"></audio>
+        <audio id="speakerSound" src="media/speaker.mp3"></audio>
+
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="icon" data-window="profile">
+                <div class="icon-image">🤖</div>
+                <span class="icon-label">Profile</span>
+            </div>
+            <div class="icon" data-window="skills">
+                <div class="icon-image">📊</div>
+                <span class="icon-label">Skills</span>
+            </div>
+            <div class="icon" data-window="experience">
+                <div class="icon-image">💼</div>
+                <span class="icon-label">Experience</span>
+            </div>
+            <div class="icon" data-window="projects">
+                <div class="icon-image">🚀</div>
+                <span class="icon-label">Projects</span>
+            </div>
+            <div class="icon" data-window="contact">
+                <div class="icon-image">📧</div>
+                <span class="icon-label">Contact</span>
+            </div>
+            <div class="icon" data-window="terminal">
+                <div class="icon-image">💻</div>
+                <span class="icon-label">Terminal</span>
+            </div>
+            <div class="icon" data-window="websites">
+                <div class="icon-image">🌐</div>
+                <span class="icon-label">Websites</span>
+            </div>
+        </div>
+
+        <!-- Windows -->
+        <div id="profileWindow" class="window hidden" data-title="profile.ico">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+                <div class="window-title">profile.ico</div>
+            </div>
+            <div class="window-content">
+                <div class="profile-content">
+                    <div class="profile-header">
+                        <div class="profile-image"><img src="images/profile.webp" alt="Profile Photo" class="profile-photo" />
+                            <div class="placeholder-image">MK</div>
+                        </div>
+                        <div class="profile-info">
+                            <h1 class="profile-name">Mindaugas Kučinskas</h1>
+                            <h2 class="profile-title">
+                                <span class="cyan">Cloud Engineer | Full Stack Dev</span><br>
+                                <span class="purple">Marketing & Sales | Web Solutions</span><br><br>
+                                <span class="version">// CV | Static HTML: ON [.CSS /> .JS]</span>
+                            </h2>
+                            <div class="profile-description">
+                                <div class="description-line">
+                                    <span class="prompt cyan">
+									intro:// user@localhost:~$ whoami<br>
+									Mindaugas Kučinskas — born in [1985] BIOS-era native, raised on raw code.
+									Started with table-based HTML, evolved into cloud-native and serverless stacks.
+									From manual FTP to full Infrastructure-as-Code (IaC) and automated CI/CD pipelines.
+									Full-stack dev turned cloud engineer, now designing secure systems from the backend.
+									I treat every endpoint as a potential risk — and every log as a source of proof.<br>
+									</span>
+                                </div>
+                                <div class="description-line">
+                                    <span class="prompt purple">
+									outro:// user@localhost:~$ uptime<br>
+									40+ years uptime. Kernel stable. No breaches. All logs parsed.
+									I build CI/CD pipelines that are resilient, secure, and fully automated.
+									Secrets are rotated. Access is minimal. Code is clean and reproducible.
+									Security isn’t a layer — it’s baked into every commit and secure deploy.
+									Still running, still secure. CLI or GUI — it’s all about clean, logical code.<br>
+									</span>
+                                </div>
+                            </div>
+						    <div>
+						 <span class="tag">AI Integration</span>
+						 <span class="tag">API Design</span>
+						 <span class="tag">Backend Architecture</span>
+						 <span class="tag">CI/CD Pipelines</span>
+					 	 <span class="tag">DevOps Automation</span>
+						 <span class="tag">Product Strategy</span>
+					 	 <span class="tag">System Hardening</span>
+						 <span class="tag">Team Leadership</span>
+						 <span class="tag">UX/UI Design</span>
+						 <span class="tag">Web Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-status">
+                        <div class="status-header">
+                            <div class="status-indicator"></div>
+                            <span>SYSTEM STATUS: ONLINE</span>
+                        </div>
+                        <div class="status-info">
+                            <div class="status-line">
+                                <span class="status-label">Location:</span>
+                                <span>Klaipėda, Lithuania, EU</span>
+                            </div>
+                            <div class="status-line">
+                                <span class="status-label">Languages:</span>
+                                <span>English, Lithuanian, RU</span>
+                            </div>
+                            <div class="status-line">
+                                <span class="status-label">OS Version:</span>
+                                <span>Matrix OS 4.20 <span class="stable">[STABLE]</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skillsWindow" class="window hidden" data-title="skills.sys">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+                <div class="window-title">skills.sys</div>
+            </div>
+            <div class="window-content">
+                <div class="skills-content">
+                    <div class="skills-tabs">
+                        <button class="tab-button active" data-tab="product">Product</button>
+                        <button class="tab-button" data-tab="tech">Tech</button>
+                        <button class="tab-button" data-tab="leadership">Leadership</button>
+                        <button class="tab-button" data-tab="ai">AI</button>
+                    </div>
+                    <div class="skills-panel">
+                        <div class="proficiency-legend">
+                            <h3>// PROFICIENCY LEVELS</h3>
+                            <div class="legend-grid">
+                                <div class="legend-item">
+                                    <div class="legend-dot expert"></div>
+                                    <div>
+                                        <span class="legend-label">Expert</span>
+                                        <p class="legend-desc">Deep knowledge and extensive experience</p>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-dot advanced"></div>
+                                    <div>
+                                        <span class="legend-label">Advanced</span>
+                                        <p class="legend-desc">Strong competency with broad application</p>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-dot proficient"></div>
+                                    <div>
+                                        <span class="legend-label">Proficient</span>
+                                        <p class="legend-desc">Solid working knowledge</p>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-dot familiar"></div>
+                                    <div>
+                                        <span class="legend-label">Familiar</span>
+                                        <p class="legend-desc">Basic understanding</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="skillsContainer" class="skills-container">
+                            <!-- Skills will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="experienceWindow" class="window hidden" data-title="experience.dat">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+                <div class="window-title">experience.dat</div>
+            </div>
+            <div class="window-content">
+                <div class="experience-content">
+                    <div class="experience-tabs">
+                        <button class="exp-tab active" data-company="insside">Insside</button>
+                        <button class="exp-tab" data-company="orbith">Orbith</button>
+                        <button class="exp-tab" data-company="sap1">SAP (Consultant)</button>
+                        <button class="exp-tab" data-company="sap2">SAP (PO)</button>
+                    </div>
+                    <div id="experienceDetails" class="experience-details">
+                        <!-- Experience details will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectsWindow" class="window hidden" data-title="projects.cfg">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+                <div class="window-title">projects.cfg</div>
+            </div>
+            <div class="window-content">
+                <div class="projects-content">
+                    <div class="project-tabs">
+                        <button class="project-tab active" data-project="0">AI Portal</button>
+                        <button class="project-tab" data-project="1">Network Monitor</button>
+                        <button class="project-tab" data-project="2">Knowledge Base</button>
+                    </div>
+                    <div id="projectDetails" class="project-details">
+                        <!-- Project details will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contactWindow" class="window hidden" data-title="contact.dll">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+                <div class="window-title">contact.dll</div>
+            </div>
+            <div class="window-content">
+                <div class="contact-content">
+                    <h2>// CONTACT INFORMATION</h2>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-section">
+                                <h3>// CONNECT</h3>
+                                <div class="contact-links">
+								    <a href="https://github.com" target="_blank" class="contact-link">
+                                        <span class="contact-icon">🐙</span>
+                                        <span>GitHub</span>
+                                    </a>
+                                    <a href="https://linkedin.com" target="_blank" class="contact-link">
+                                        <span class="contact-icon">💼</span>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                    <a href="mailto:meistrelio@gmail.com" class="contact-link">
+                                        <span class="contact-icon">📧</span>
+                                        <span>Meistrelio@gmail.com</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="contact-section">
+                                <h3>// LOCATION</h3>
+                                <p>Klaipėda, Lithuania</p>
+                                <p class="contact-note">Open to remote opportunities worldwide</p>
+                            </div>
+                            <div class="contact-section">
+                                <h3>// AVAILABILITY</h3>
+                                <div class="availability">
+                                    <div class="status-dot"></div>
+                                    <span>Currently available for new projects</span>
+                                </div>
+                                <p class="contact-note">Interested in product management roles focusing on AI innovation</p>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <h3>// SEND MESSAGE</h3>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">NAME</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">EMAIL</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">MESSAGE</label>
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Send Message</button>
+                                <p class="form-note">This is a simulation. No real messages are sent.</p>
+                            </form>
+                            <div id="formSuccess" class="form-success hidden">
+                                <div class="success-icon">✓</div>
+                                <h4>Message Sent!</h4>
+                                <p>Thanks for reaching out. I'll get back to you soon.</p>
+                                <button id="sendAnother" class="secondary-btn">Send Another Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="terminalWindow" class="window hidden" data-title="command.exe">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+                <div class="window-title">command.exe</div>
+            </div>
+            <div class="window-content">
+                <div class="terminal-content">
+                    <div id="terminalOutput" class="terminal-output">
+                        <div class="terminal-line">Welcome to Terminal v3.04.21 - AI Enhanced</div>
+                        <div class="terminal-line">Type 'help' to see available commands</div>
+                        <div class="terminal-line"></div>
+                    </div>
+                    <div class="terminal-input">
+                        <span class="terminal-prompt">></span>
+                        <input type="text" id="terminalInput" class="terminal-field" autofocus>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="websitesWindow" class="window hidden" data-title="websites.url">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+                <div class="window-title">websites.url</div>
+            </div>
+            <div class="window-content">
+                <div class="websites-content">
+                    <h2>// MAIN WEBSITES</h2>
+                    <div class="websites-links">
+                        <a href="https://www.google.com" target="_blank" class="website-link" style="color: #4285F4;">
+                            <span class="website-icon">🔍</span>
+                            <span>Google</span>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="website-link" style="color: #1877F2;">
+                            <span class="website-icon">👥</span>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" class="website-link" style="color: #FF0000;">
+                            <span class="website-icon">▶️</span>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="https://www.amazon.com" target="_blank" class="website-link" style="color: #FF9900;">
+                            <span class="website-icon">🛒</span>
+                            <span>Amazon</span>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" class="website-link" style="color: #1DA1F2;">
+                            <span class="website-icon">🐦</span>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="website-link" style="color: #C13584;">
+                            <span class="website-icon">📷</span>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" class="website-link" style="color: #0A66C2;">
+                            <span class="website-icon">💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.github.com" target="_blank" class="website-link" style="color: #6e5494;">
+                            <span class="website-icon">🐙</span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.netflix.com" target="_blank" class="website-link" style="color: #E50914;">
+                            <span class="website-icon">🎬</span>
+                            <span>Netflix</span>
+                        </a>
+                        <a href="https://www.spotify.com" target="_blank" class="website-link" style="color: #1DB954;">
+                            <span class="website-icon">🎵</span>
+                            <span>Spotify</span>
+                        </a>
+                        <a href="https://www.reddit.com" target="_blank" class="website-link" style="color: #FF4500;">
+                            <span class="website-icon">👽</span>
+                            <span>Reddit</span>
+                        </a>
+                        <a href="https://www.twitch.tv" target="_blank" class="website-link" style="color: #9146FF;">
+                            <span class="website-icon">🎮</span>
+                            <span>Twitch</span>
+                        </a>
+                        <a href="https://www.pinterest.com" target="_blank" class="website-link" style="color: #E60023;">
+                            <span class="website-icon">📌</span>
+                            <span>Pinterest</span>
+                        </a>
+                        <a href="https://www.tiktok.com" target="_blank" class="website-link" style="color: #000000;">
+                            <span class="website-icon">📱</span>
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://www.wikipedia.org" target="_blank" class="website-link" style="color: #72777d;">
+                            <span class="website-icon">📚</span>
+                            <span>Wikipedia</span>
+                        </a>
+                        <a href="https://www.apple.com" target="_blank" class="website-link" style="color: #A2AAAD;">
+                            <span class="website-icon">🍎</span>
+                            <span>Apple</span>
+                        </a>
+                        <a href="https://www.microsoft.com" target="_blank" class="website-link" style="color: #00A4EF;">
+                            <span class="website-icon">🪟</span>
+                            <span>Microsoft</span>
+                        </a>
+                        <a href="https://www.dropbox.com" target="_blank" class="website-link" style="color: #0061FF;">
+                            <span class="website-icon">📦</span>
+                            <span>Dropbox</span>
+                        </a>
+                        <a href="https://www.slack.com" target="_blank" class="website-link" style="color: #4A154B;">
+                            <span class="website-icon">💬</span>
+                            <span>Slack</span>
+                        </a>
+                        <a href="https://www.zoom.us" target="_blank" class="website-link" style="color: #2D8CFF;">
+                            <span class="website-icon">🎥</span>
+                            <span>Zoom</span>
+                        </a>
+                        <a href="https://www.discord.com" target="_blank" class="website-link" style="color: #5865F2;">
+                            <span class="website-icon">🎧</span>
+                            <span>Discord</span>
+                        </a>
+                        <a href="https://www.whatsapp.com" target="_blank" class="website-link" style="color: #25D366;">
+                            <span class="website-icon">📞</span>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://www.telegram.org" target="_blank" class="website-link" style="color: #0088cc;">
+                            <span class="website-icon">✈️</span>
+                            <span>Telegram</span>
+                        </a>
+                        <a href="https://www.medium.com" target="_blank" class="website-link" style="color: #000000;">
+                            <span class="website-icon">📝</span>
+                            <span>Medium</span>
+                        </a>
+                        <a href="https://www.quora.com" target="_blank" class="website-link" style="color: #B92B27;">
+                            <span class="website-icon">❓</span>
+                            <span>Quora</span>
+                        </a>
+                        <a href="https://www.stackoverflow.com" target="_blank" class="website-link" style="color: #F48024;">
+                            <span class="website-icon">⚡</span>
+                            <span>Stack Overflow</span>
+                        </a>
+                        <a href="https://www.airbnb.com" target="_blank" class="website-link" style="color: #FF5A5F;">
+                            <span class="website-icon">🏠</span>
+                            <span>Airbnb</span>
+                        </a>
+                        <a href="https://www.booking.com" target="_blank" class="website-link" style="color: #003580;">
+                            <span class="website-icon">🏨</span>
+                            <span>Booking.com</span>
+                        </a>
+                        <a href="https://www.uber.com" target="_blank" class="website-link" style="color: #000000;">
+                            <span class="website-icon">🚗</span>
+                            <span>Uber</span>
+                        </a>
+                        <a href="https://www.lyft.com" target="_blank" class="website-link" style="color: #FF00BF;">
+                            <span class="website-icon">🚕</span>
+                            <span>Lyft</span>
+                        </a>
+                        <a href="https://www.doordash.com" target="_blank" class="website-link" style="color: #FF3008;">
+                            <span class="website-icon">🍔</span>
+                            <span>DoorDash</span>
+                        </a>
+                        <a href="https://www.grubhub.com" target="_blank" class="website-link" style="color: #F63440;">
+                            <span class="website-icon">🍕</span>
+                            <span>Grubhub</span>
+                        </a>
+                        <a href="https://www.etsy.com" target="_blank" class="website-link" style="color: #F16521;">
+                            <span class="website-icon">🎨</span>
+                            <span>Etsy</span>
+                        </a>
+                        <a href="https://www.ebay.com" target="_blank" class="website-link" style="color: #E53238;">
+                            <span class="website-icon">🏷️</span>
+                            <span>eBay</span>
+                        </a>
+                        <a href="https://www.paypal.com" target="_blank" class="website-link" style="color: #003087;">
+                            <span class="website-icon">💰</span>
+                            <span>PayPal</span>
+                        </a>
+                        <a href="https://www.venmo.com" target="_blank" class="website-link" style="color: #3D95CE;">
+                            <span class="website-icon">💸</span>
+                            <span>Venmo</span>
+                        </a>
+                        <a href="https://www.coinbase.com" target="_blank" class="website-link" style="color: #0052FF;">
+                            <span class="website-icon">📈</span>
+                            <span>Coinbase</span>
+                        </a>
+                        <a href="https://www.robinhood.com" target="_blank" class="website-link" style="color: #00C805;">
+                            <span class="website-icon">📈</span>
+                            <span>Robinhood</span>
+                        </a>
+                        <a href="https://www.nytimes.com" target="_blank" class="website-link" style="color: #000000;">
+                            <span class="website-icon">📰</span>
+                            <span>NY Times</span>
+                        </a>
+                        <a href="https://www.cnn.com" target="_blank" class="website-link" style="color: #CC0000;">
+                            <span class="website-icon">🗞️</span>
+                            <span>CNN</span>
+                        </a>
+                        <a href="https://www.bbc.com" target="_blank" class="website-link" style="color: #BB1919;">
+                            <span class="website-icon">📺</span>
+                            <span>BBC</span>
+                        </a>
+                        <a href="https://www.espn.com" target="_blank" class="website-link" style="color: #FF0000;">
+                            <span class="website-icon">⚽</span>
+                            <span>ESPN</span>
+                        </a>
+                        <a href="https://www.weather.com" target="_blank" class="website-link" style="color: #2B6CB0;">
+                            <span class="website-icon">🌦️</span>
+                            <span>Weather.com</span>
+                        </a>
+                        <a href="https://www.duolingo.com" target="_blank" class="website-link" style="color: #58CC02;">
+                            <span class="website-icon">🦉</span>
+                            <span>Duolingo</span>
+                        </a>
+                        <a href="https://www.coursera.org" target="_blank" class="website-link" style="color: #2A73CC;">
+                            <span class="website-icon">🎓</span>
+                            <span>Coursera</span>
+                        </a>
+                        <a href="https://www.udemy.com" target="_blank" class="website-link" style="color: #A435F0;">
+                            <span class="website-icon">📚</span>
+                            <span>Udemy</span>
+                        </a>
+                        <a href="https://www.canva.com" target="_blank" class="website-link" style="color: #00C4CC;">
+                            <span class="website-icon">🎨</span>
+                            <span>Canva</span>
+                        </a>
+                        <a href="https://www.adobe.com" target="_blank" class="website-link" style="color: #FF0000;">
+                            <span class="website-icon">🖌️</span>
+                            <span>Adobe</span>
+                        </a>
+                        <a href="https://www.figma.com" target="_blank" class="website-link" style="color: #F24E1E;">
+                            <span class="website-icon">✏️</span>
+                            <span>Figma</span>
+                        </a>
+                        <a href="https://www.notion.so" target="_blank" class="website-link" style="color: #000000;">
+                            <span class="website-icon">📝</span>
+                            <span>Notion</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="taskbar-left">
+                <button id="startButton" class="start-button">START</button>
+                <div id="startMenu" class="start-menu hidden">
+                    <div class="start-header">
+                        <div class="start-user">👽 root@matrix-os</div>
+                    </div>
+                    <div class="start-items">
+                        <div class="start-item" data-window="profile">
+                            <span class="start-icon">📄</span>
+                            profile.ico
+                        </div>
+                        <div class="start-item" data-window="skills">
+                            <span class="start-icon">📊</span>
+                            skills.sys
+                        </div>
+                        <div class="start-item" data-window="experience">
+                            <span class="start-icon">💼</span>
+                            experience.dat
+                        </div>
+                        <div class="start-item" data-window="projects">
+                            <span class="start-icon">🚀</span>
+                            projects.cfg
+                        </div>
+                        <div class="start-item" data-window="contact">
+                            <span class="start-icon">📧</span>
+                            contact.dll
+                        </div>
+                        <div class="start-item" data-window="terminal">
+                            <span class="start-icon">💻</span>
+                            command.exe
+                        </div>
+                        <div class="start-item" data-window="websites">
+                            <span class="start-icon">🌐</span>
+                            websites.url
+                        </div>
+                    </div>
+                    <div class="start-footer">
+                        <div class="start-item" onclick="location.reload()">
+                            <span class="start-icon">🔄</span>
+                            RESTART
+                        </div>
+                    </div>
+                </div>
+                <div id="taskbarItems" class="taskbar-items">
+                    <!-- Open windows will appear here -->
+                </div>
+            </div>
+            
+            <div class="taskbar-right">
+                <button id="audioToggle" class="audio-toggle" title="Toggle Audio">🔊</button>
+                <div class="taskbar-time">
+                    <div id="currentTime" class="time"></div>
+                    <div id="currentDate" class="date"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div id="notification" class="notification hidden">
+            <div class="notification-header">
+                <span>System Notification</span>
+                <button class="notification-close">×</button>
+            </div>
+            <div id="notificationMessage" class="notification-message"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="customCursor" class="custom-cursor"></div>
+
+    <script src="script.js"></script>
+	
+</body>
+</html>
